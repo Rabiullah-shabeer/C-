@@ -1,19 +1,22 @@
 #include <iostream>
 
 using namespace std;
-
+const double CENTIMETERS_PER_INCHE=2.54;
+const int INCHES_PER_FOOT=12;
 int main()
 {
-int n,f1=0,f2=1,f3=1;
- cout<<"Enter a number:";
- cin >>n;
- cout <<f1<<"\t"<<f2;
- while (f3<n)
-  {
-f3=f1+f2;
-cout<<"\t"<<f3;
-f1=f2;
-f2=f3;
-  }
+int inches,feet,totalinches;
+double centimeter;
+ cout<<"Enter two numbers one for feet and one for inches\n";
+ cout<<"feet=";
+ cin>>feet;
+ cout<<"inches=";
+ cin>>inches;
+ totalinches=INCHES_PER_FOOT*feet+inches;
+ cout<<" total inches=";
+ cout<<totalinches<<endl;
+ centimeter=CENTIMETERS_PER_INCHE*totalinches;
+ cout<<"the number of centimeter="<<centimeter<<endl;
+
     return 0;
 }
