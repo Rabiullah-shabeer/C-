@@ -1,22 +1,20 @@
 #include <iostream>
-
+#include <conio.h>
 using namespace std;
-const double CENTIMETERS_PER_INCHE=2.54;
-const int INCHES_PER_FOOT=12;
+
 int main()
 {
-int inches,feet,totalinches;
-double centimeter;
- cout<<"Enter two numbers one for feet and one for inches\n";
- cout<<"feet=";
- cin>>feet;
- cout<<"inches=";
- cin>>inches;
- totalinches=INCHES_PER_FOOT*feet+inches;
- cout<<" total inches=";
- cout<<totalinches<<endl;
- centimeter=CENTIMETERS_PER_INCHE*totalinches;
- cout<<"the number of centimeter="<<centimeter<<endl;
-
+int i,u,t,ARR[5]={4,19,1,3,5};
+for (u=4;u>=1;u--)
+for (i=0;i<u;i++)
+if (ARR[i]>ARR[i+1])
+{
+    t=ARR[i];
+    ARR[i]=ARR[i+1];
+    ARR[i+1]=t;
+}
+cout <<"Sorted values"<<endl;
+for(i=0;i<=4;i++)
+    cout <<ARR[i]<<endl;
     return 0;
 }
